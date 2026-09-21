@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1550" width="1000" height="1550">
+  <defs>
+    <!-- Studio Ambient Floor Reflection Gradient -->
+    <linearGradient id="floorReflectionGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32" />
+      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Main Front Face Satin Matte Black Body Gradient -->
+    <linearGradient id="frontFaceGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#2a2e36" />
+      <stop offset="15%" stop-color="#20232a" />
+      <stop offset="50%" stop-color="#15171b" />
+      <stop offset="85%" stop-color="#101114" />
+      <stop offset="100%" stop-color="#0a0b0d" />
+    </linearGradient>
+
+    <!-- Left Curved Side Panel Gradient (Perspective View) -->
+    <linearGradient id="leftPanelGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141619" />
+      <stop offset="25%" stop-color="#22262d" />
+      <stop offset="70%" stop-color="#181a1f" />
+      <stop offset="100%" stop-color="#0e1012" />
+    </linearGradient>
+
+    <!-- Top Surface Bevel & Edge -->
+    <linearGradient id="topBevelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3c414d" />
+      <stop offset="35%" stop-color="#282c35" />
+      <stop offset="75%" stop-color="#191c22" />
+      <stop offset="100%" stop-color="#101216" />
+    </linearGradient>
+
+    <!-- Metallic Rim Highlight along left shoulder -->
+    <linearGradient id="shoulderHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+      <stop offset="12%" stop-color="rgba(255,255,255,0.35)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.12)" />
+      <stop offset="85%" stop-color="rgba(255,255,255,0.22)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+
+    <!-- Display Screen Glass (Deep Mirror Jet Black) -->
+    <linearGradient id="displayGlassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10" />
+      <stop offset="45%" stop-color="#050608" />
+      <stop offset="100%" stop-color="#020304" />
+    </linearGradient>
+
+    <!-- Display Glass Diagonal Specular Glare -->
+    <linearGradient id="specularGlare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
+      <stop offset="30%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.06)" />
+    </linearGradient>
+
+    <!-- Metallic Brand Logo (KAPBOM) -->
+    <linearGradient id="kapbomSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e8ecf2" />
+      <stop offset="75%" stop-color="#b6bcc8" />
+      <stop offset="100%" stop-color="#dce1eb" />
+    </linearGradient>
+
+    <!-- Reflection Mask -->
+    <mask id="floorFade">
+      <rect x="0" y="1180" width="1000" height="370" fill="url(#floorReflectionGrad)" />
+    </mask>
+
+    <!-- Heavy Realistic Drop Shadow -->
+    <filter id="chassisShadow" x="-15%" y="-10%" width="130%" height="135%">
+      <feDropShadow dx="15" dy="35" stdDeviation="28" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+
+    <!-- LED Numbers Glow -->
+    <filter id="whiteLedGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ==================== 1. MIRRORED GROUND REFLECTION ==================== -->
+  <g mask="url(#floorFade)" transform="scale(1, -1) translate(0, -2390)">
+    <!-- Base Chassis in Reflection -->
+    <path d="M 290,1190 
+             C 270,1190 250,1175 250,1145 
+             L 250,1000 
+             L 730,1000 
+             L 730,1145 
+             C 730,1175 710,1190 690,1190 
+             Z" 
+          fill="#15171c" opacity="0.65" />
+    
+    <!-- Mirrored KAPBOM Logo -->
+    <text x="490" y="1080" font-family="'Montserrat', 'Helvetica', 'Arial', sans-serif" font-size="44" font-weight="900" letter-spacing="5" fill="#a4abb8" text-anchor="middle" opacity="0.5">
+      KAPBOM
+    </text>
+  </g>
+
+  <!-- Ground Contact Shadow -->
+  <ellipse cx="490" cy="1205" rx="250" ry="18" fill="#000000" opacity="0.45" filter="blur(10px)" />
+  <ellipse cx="485" cy="1202" rx="220" ry="9" fill="#000000" opacity="0.75" filter="blur(4px)" />
+
+  <!-- ==================== 2. MAIN POWERBANK CHASSIS ==================== -->
+  <g filter="url(#chassisShadow)">
+    <!-- 3D Left Thickness Side Panel -->
+    <path d="M 305,200 
+             C 255,220 215,280 210,350 
+             L 245,1145 
+             C 248,1180 270,1202 305,1202 
+             L 318,1202 
+             L 282,1145 
+             L 248,350 
+             C 250,290 280,230 318,212 
+             Z" 
+          fill="url(#leftPanelGrad)" />
+
+    <!-- Left Side Micro-USB / Type-C Input Port -->
+    <g transform="translate(230, 360)">
+      <rect x="0" y="0" width="10" height="42" rx="5" fill="#090a0d" stroke="#2b2f38" stroke-width="1.2" />
+      <rect x="2" y="5" width="6" height="32" rx="3" fill="#181b22" />
+    </g>
+
+    <!-- Front Main Face (Slight 3D perspective slant) -->
+    <path d="M 318,212 
+             C 355,190 450,175 550,175 
+             C 650,175 725,196 755,230 
+             C 775,250 782,280 782,320 
+             L 762,1135 
+             C 760,1175 735,1202 695,1202 
+             L 305,1202 
+             C 272,1202 260,1175 260,1135 
+             L 272,320 
+             C 275,270 290,230 318,212 
+             Z" 
+          fill="url(#frontFaceGrad)" 
+          stroke="#272b34" 
+          stroke-width="1.8" />
+
+    <!-- Top Cap Beveled Curved Surface -->
+    <path d="M 318,212 
+             C 355,190 450,175 550,175 
+             C 650,175 725,196 755,230 
+             L 730,250 
+             C 700,222 630,205 540,205 
+             C 450,205 370,218 332,236 
+             Z" 
+          fill="url(#topBevelGrad)" />
+
+    <!-- Top Surface Ports (4 Ports: C1, C2, C3, C4) -->
+    <g transform="translate(18, -10)">
+      <!-- Port 1: C1 -->
+      <g transform="translate(338, 222) rotate(4)">
+        <text x="18" y="-5" font-family="'Helvetica', sans-serif" font-size="11" font-weight="bold" fill="#757d8e" text-anchor="middle">C1</text>
+        <rect x="0" y="0" width="36" height="13" rx="6.5" fill="#090b0f" stroke="#3d4352" stroke-width="1.2" />
+        <rect x="6" y="4" width="24" height="5" rx="2.5" fill="#1b1f28" />
+      </g>
+
+      <!-- Port 2: C2 -->
+      <g transform="translate(420, 215) rotate(2)">
+        <text x="20" y="-5" font-family="'Helvetica', sans-serif" font-size="11" font-weight="bold" fill="#757d8e" text-anchor="middle">C2</text>
+        <rect x="0" y="0" width="40" height="14" rx="7" fill="#090b0f" stroke="#3d4352" stroke-width="1.2" />
+        <rect x="7" y="4.5" width="26" height="5" rx="2.5" fill="#1b1f28" />
+      </g>
+
+      <!-- Port 3: C3 -->
+      <g transform="translate(510, 210) rotate(0)">
+        <text x="21" y="-5" font-family="'Helvetica', sans-serif" font-size="11" font-weight="bold" fill="#757d8e" text-anchor="middle">C3</text>
+        <rect x="0" y="0" width="42" height="14" rx="7" fill="#090b0f" stroke="#3d4352" stroke-width="1.2" />
+        <rect x="8" y="4.5" width="26" height="5" rx="2.5" fill="#1b1f28" />
+      </g>
+
+      <!-- Port 4: C4 -->
+      <g transform="translate(605, 207) rotate(-2)">
+        <text x="21" y="-5" font-family="'Helvetica', sans-serif" font-size="11" font-weight="bold" fill="#757d8e" text-anchor="middle">C4</text>
+        <rect x="0" y="0" width="42" height="15" rx="7.5" fill="#090b0f" stroke="#3d4352" stroke-width="1.2" />
+        <rect x="8" y="5" width="26" height="5" rx="2.5" fill="#1b1f28" />
+      </g>
+    </g>
+
+    <!-- Metallic Rim Highlight along left corner -->
+    <path d="M 318,212 L 282,320 L 270,1135 C 270,1165 282,1190 305,1198" 
+          fill="none" 
+          stroke="url(#shoulderHighlight)" 
+          stroke-width="2" />
+
+    <!-- Subtle Right Specular Edge -->
+    <path d="M 755,230 L 782,320 L 762,1135" 
+          fill="none" 
+          stroke="rgba(255,255,255,0.07)" 
+          stroke-width="1.2" />
+
+    <!-- ==================== 3. DIGITAL LED DISPLAY ==================== -->
+    <g transform="translate(315, 275)">
+      <!-- Outer Border / Chamfer of Display -->
+      <rect x="0" y="0" width="405" height="155" rx="28" 
+            fill="#090b0e" 
+            stroke="#2b303a" 
+            stroke-width="2.5" />
+
+      <!-- Inner High-Gloss Glass -->
+      <rect x="4" y="4" width="397" height="147" rx="24" 
+            fill="url(#displayGlassGrad)" />
+
+      <!-- Glossy Diagonal Specular Reflection Line -->
+      <path d="M 4,28 Q 200,4 397,28 L 397,90 L 140,151 L 4,151 Z" 
+            fill="url(#specularGlare)" />
+
+      <!-- LED Glowing Readout -->
+      <g filter="url(#whiteLedGlow)" text-anchor="middle">
+        <!-- 100% Text -->
+        <text x="185" y="88" 
+              font-family="'Montserrat', 'Helvetica', 'Arial', sans-serif" 
+              font-size="64" 
+              font-weight="900" 
+              fill="#ffffff" 
+              letter-spacing="-1">
+          100<tspan font-size="40" font-weight="700" dx="2">%</tspan>
+        </text>
+
+        <!-- Lightning Bolt Icon -->
+        <path d="M 292,50 L 275,74 L 287,74 L 277,96 L 302,69 L 288,69 Z" 
+              fill="#ffffff" />
+
+        <!-- Subtitle: SUPER FAST CHARGE POWER BANK -->
+        <text x="202" y="122" 
+              font-family="'Montserrat', 'Helvetica', 'Arial', sans-serif" 
+              font-size="14.5" 
+              font-weight="700" 
+              fill="#f8fafc" 
+              letter-spacing="2.6" 
+              opacity="0.95">
+          SUPER FAST CHARGE POWER BANK
+        </text>
+      </g>
+    </g>
+
+    <!-- ==================== 4. KAPBOM BRANDING ==================== -->
+    <g transform="translate(528, 1070)">
+      <text x="0" y="0" 
+            font-family="'Montserrat', 'Helvetica', 'Arial', sans-serif" 
+            font-size="54" 
+            font-weight="900" 
+            letter-spacing="5.5" 
+            fill="url(#kapbomSilverGrad)" 
+            text-anchor="middle">
+        KAPBOM
+      </text>
+    </g>
+  </g>
+</svg>

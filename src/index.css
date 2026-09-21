@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: 'Bebas Neue', cursive, sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --color-brand-blue-dark: #00296B;
+  --color-brand-blue-medium: #003F88;
+  --color-brand-blue-light: #00509D;
+  --color-brand-yellow: #FDC500;
+  --color-brand-yellow-light: #FFD500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', cursive, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}

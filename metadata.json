@@ -1,0 +1,6 @@
+{
+  "name": "Powerbank Kapbom 20.000mAh",
+  "description": "Página oficial do Powerbank Kapbom 20.000mAh com carregamento Turbo 22.5W, display digital LED e cabos embutidos. Energia infinita para sua liberdade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
