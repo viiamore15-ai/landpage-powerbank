@@ -22,3 +22,47 @@ html {
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
+
+/* Hero entrance fade-in + slide-up animation */
+@keyframes heroSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-slide-up {
+  animation: heroSlideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-slide-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

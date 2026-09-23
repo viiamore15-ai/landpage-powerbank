@@ -45,7 +45,7 @@ export default function App() {
         <Pricing onOpenOrderModal={handleOpenOrderModal} />
 
         {/* Testimonials */}
-        <Testimonials />
+        <Testimonials onOpenOrderModal={handleOpenOrderModal} />
 
         {/* Location (Mooca - São Paulo) with Google Maps */}
         <Location />
