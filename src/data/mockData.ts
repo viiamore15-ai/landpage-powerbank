@@ -8,7 +8,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     id: "individual",
     name: "Individual",
     subtitle: "Para o dia a dia e trabalho",
-    price: "149,99",
+    price: "149,90",
     originalPrice: "199,90",
     units: 1,
     freeShipping: true,
@@ -21,29 +21,29 @@ export const PRICING_PLANS: PricingPlan[] = [
       "Garantia Total de 30 Dias com Nota",
       "Suporte exclusivo direto no WhatsApp"
     ],
-    whatsappMessage: "Olá! Gostaria de comprar 1 Unidade do Powerbank Kapbom 20.000mAh (Plano Individual - R$ 149,99 com Frete Grátis). Como podemos prosseguir com o pagamento e entrega?"
+    whatsappMessage: "Olá! Gostaria de comprar 1 Unidade do Powerbank Kapbom 20.000mAh (Plano Individual - R$ 149,90 com Frete Grátis). Como podemos prosseguir com o pagamento e entrega?"
   },
   {
     id: "combo-duplo",
     name: "Combo Duplo",
     subtitle: "Para você e seu par ou reserva",
-    price: "274,99",
+    price: "274,90",
     originalPrice: "300,00",
     featured: true,
     badge: "MAIS VENDIDO",
-    savings: "Economia de R$ 25,00",
+    savings: "Economia de R$ 25,10",
     freeShipping: true,
     units: 2,
     items: [
       "2x Powerbank Kapbom 20.000mAh Originais",
-      "De R$ 300,00 por apenas R$ 274,99",
+      "De R$ 300,00 por apenas R$ 274,90",
       "2 Cargas Completas em cada aparelho",
       "Frete Grátis para todo o Brasil",
       "Cores à sua escolha (Preto Fosco / Branco Neve)",
       "Carregamento Turbo 22.5W Power Delivery",
       "Garantia Total de 30 Dias em ambos"
     ],
-    whatsappMessage: "Olá! Quero aproveitar a promoção do COMBO DUPLO do Powerbank Kapbom (De R$ 300,00 por R$ 274,99 com Frete Grátis para todo o Brasil). Quais cores estão disponíveis para envio imediato?"
+    whatsappMessage: "Olá! Quero aproveitar a promoção do COMBO DUPLO do Powerbank Kapbom (De R$ 300,00 por R$ 274,90 com Frete Grátis para todo o Brasil). Quais cores estão disponíveis para envio imediato?"
   },
   {
     id: "kit-familia",
